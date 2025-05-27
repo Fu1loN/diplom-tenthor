@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { HomePage } from './pages/HomePage';
+import { SearchPage } from './pages/SearchPage';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+const App = () => {
+  const [searchQuery, setSearchQuery] = useState('');
 
-// export default App;
+  return (
+    <Router>
+      <div className="app">
+        <Header onSearch={setSearchQuery} />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/search" element={<SearchPage searchQuery={searchQuery} />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+  );
+};
+
+export default App;

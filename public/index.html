@@ -7,22 +7,80 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Last.fm Clone - Music Discovery Platform"
     />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Last.fm Clone</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__logo">Last.fm Clone</div>
+          <nav class="header__nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Top Artists</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Top Tracks</a></li>
+            </ul>
+          </nav>
+          <div class="header__search">
+            <input type="text" class="search__input" placeholder="Search for music...">
+            <button class="search__button">Search</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="top-artists">
+          <h2 class="section__title">Popular Artists</h2>
+          <div class="artists__grid">
+            <!-- Sample artist cards for initial layout -->
+            <div class="artist-card">
+              <img src="https://via.placeholder.com/150" alt="Artist 1" class="artist-card__image">
+              <h3 class="artist-card__name">Artist Name 1</h3>
+              <p class="artist-card__listeners">1,234,567 listeners</p>
+            </div>
+            <div class="artist-card">
+              <img src="https://via.placeholder.com/150" alt="Artist 2" class="artist-card__image">
+              <h3 class="artist-card__name">Artist Name 2</h3>
+              <p class="artist-card__listeners">987,654 listeners</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="top-tracks">
+          <h2 class="section__title">Popular Tracks</h2>
+          <div class="tracks__list">
+            <!-- Sample track items for initial layout -->
+            <div class="track-item">
+              <img src="https://via.placeholder.com/50" alt="Track 1" class="track-item__image">
+              <div class="track-item__info">
+                <h3 class="track-item__title">Track Name 1</h3>
+                <p class="track-item__artist">Artist Name 1</p>
+              </div>
+              <p class="track-item__listeners">789,123 listeners</p>
+            </div>
+            <div class="track-item">
+              <img src="https://via.placeholder.com/50" alt="Track 2" class="track-item__image">
+              <div class="track-item__info">
+                <h3 class="track-item__title">Track Name 2</h3>
+                <p class="track-item__artist">Artist Name 2</p>
+              </div>
+              <p class="track-item__listeners">456,789 listeners</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__container">
+          <p>&copy; 2024 Last.fm Clone. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <script src="app.js"></script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

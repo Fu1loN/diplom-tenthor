@@ -1,46 +1,78 @@
-# Getting Started with Create React App
+# Last.fm Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Простой клон сервиса Last.fm, созданный с использованием React и TypeScript. Проект позволяет искать музыкальных исполнителей и треки, используя API Last.fm.
 
-## Available Scripts
+## Возможности
 
-In the project directory, you can run:
+- 🔍 Поиск исполнителей и треков
+- 📊 Отображение количества прослушиваний
+- 🖼️ Работа с изображениями исполнителей и треков
+- 📱 Адаптивный дизайн
 
-### `npm start`
+## Технологии
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
+- TypeScript
+- React Router
+- Last.fm API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Структура проекта
 
-### `npm test`
+```
+src/
+  ├── components/        # React компоненты
+  │   ├── Header.tsx    # Шапка сайта с поиском
+  │   ├── Footer.tsx    # Подвал сайта
+  │   ├── ArtistCard.tsx# Карточка исполнителя
+  │   └── TrackItem.tsx # Элемент списка треков
+  ├── pages/            # Страницы приложения
+  │   ├── HomePage.tsx  # Главная страница
+  │   └── SearchPage.tsx# Страница поиска
+  ├── services/         # Сервисы
+  │   └── lastfm.ts    # API клиент Last.fm
+  └── App.tsx          # Корневой компонент
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## API Last.fm
 
-### `npm run build`
+Для работы с приложением вам потребуется API ключ Last.fm. Получить его можно на странице [Last.fm API](https://www.last.fm/api/account/create).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Основные функции
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Поиск музыки**
+   - Поиск исполнителей и треков через API Last.fm
+   - Отображение результатов в виде карточек
+   - Вывод количества прослушиваний
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Работа с изображениями**
+   - Автоматический выбор изображений наилучшего качества
+   - Fallback на локальные placeholder изображения
+   - Обработка ошибок загрузки изображений
 
-### `npm run eject`
+3. **Пользовательский интерфейс**
+   - Простая и понятная навигация
+   - Адаптивный дизайн для всех устройств
+   - Удобная форма поиска
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Планы по развитию
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [ ] Добавить авторизацию пользователей
+- [ ] Реализовать скробблинг треков
+- [ ] Добавить персональные рекомендации
+- [ ] Улучшить мобильную версию
+- [ ] Добавить кэширование результатов поиска
+- [ ] Реализовать историю поиска
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Вклад в проект
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Если вы хотите внести свой вклад в проект:
 
-## Learn More
+1. Создайте форк репозитория
+2. Создайте ветку для вашей функции (`git checkout -b feature/название`)
+3. Зафиксируйте изменения (`git commit -am 'Добавлена новая функция'`)
+4. Отправьте изменения в ваш форк (`git push origin feature/название`)
+5. Создайте Pull Request
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Лицензия
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+MIT 
